@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="stylesIniciarSesion.css">
+    <script src="scriptIniciarSesion.js" defer></script>
+</head>
+<body>
+<div class="content" id="contenido">
+    <div class="cuadrado2">
+        <!--<img id="id_FotoIniciarSesion" src="img_17.png">-->
+
+    </div>
+    <h1></h1>
+    <p></p>
+
+    <label for="texto1">Usuario:</label>
+    <input type="text" id="texto1" name="texto1">
+
+    <label for="texto2">Contraseña:</label>
+    <input type="text" id="texto2" name="texto2">
+
+
+    <button class="button1" onclick="verificarCredenciales()"></button>
+    <button class="button2" onclick="irAPagina('https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Fwww.google.es%2F&dsh=S-267914952%3A1707179537694122&ec=GAZAmgQ&flowEntry=ServiceLogin&flowName=GlifWebSignIn&hl=es&ifkv=ASKXGp2KYEreR5J41D-xgZewS1ilnMpvjXGQm6YOUeEIpCvrn_G6-fWtvjv61FTC8ove6SBh4m8NPw&theme=glif')"></button>
+    <button class="button3" onclick="irAPagina('https://accounts.google.com/lifecycle/steps/signup/name?continue=https://myaccount.google.com?utm_source%3Daccount-marketing-page%26utm_medium%3Dcreate-account-button&dsh=S-1240873684:1707177623738209&flowEntry=SignUp&flowName=GlifWebSignIn&theme=glif&TL=AHNYTISP5xr2qU_MuDw7ArGO5ZH9kauiyaJIrqmTzY4Es_jExk6fl6Vqf0IHsJ5j')"></button>
+</div>
+<script>
+    function redireccionar(direct){
+        window.location.href=direct;
+    }
+</script>
+</body>
+</html>

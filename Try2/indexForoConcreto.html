@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tu Título</title>
+  <link rel="stylesheet" type="text/css" href="styleForoConcreto.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<div id="menu">
+  <div id="menu-header">W4W</div>
+
+  <a href="#" class="menu-link" id="opcionColaboraciones" data-opcion="Colaboraciones">Colaboraciones</a>
+  <div class="subapartados visible" id="subColaboraciones">
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexlistaColaboraciones.html')">Activas</a>
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexCrearColaboracion.html')">Crear</a>
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexColaboracionesHistorial.html')">Historial</a>
+  </div>
+  <a href="#" class="menu-link" id="opcionForos" data-opcion="Foros">Foros</a>
+  <div class="subapartados visible" id="subForos">
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexMisForos.html')">Mis Foros</a>
+    <a href="#" class="sub-menu-link" id="salto2" onclick="redireccionar('indexAllForos.html')">Todos los Foros</a>
+  </div>
+  <a href="#" class="menu-link" id="opcionAjustes" data-opcion="Ajustes" onclick="redireccionar('Ajustes.html')">Ajustes</a>
+  <a href="#" class="menu-link" id="opcionPerfil" data-opcion="Perfil" onclick="redireccionar('Perfil.html')">Perfil</a>
+</div>
+
+
+<div class="content" id="contenido1">
+
+  <section class="buscador">
+    <input class="subBuscador" type="text" name="descripcion" id="buscador" placeholder="Indique aquí el grupo que quiere buscar">
+    <input class="botonBuscar" type="submit" value="Buscar" id="buscar" onclick="buscarGrupo()">
+    <label for="Ciencias">Cliencias:</label>
+    <select id="Ciencias">
+      <option value=""></option>
+      <option value="Ing. Informática">Ing. Informática</option>
+      <option value="Ing. Eléctrica">Ing. Eléctrica</option>
+      <option value="Ing. Mecánica">Ing. Mecánica</option>
+      <option value="Ing. de fluidos">Ing. de fluidos</option>
+      <option value="Ing. Electrónica">Ing. Electrónica</option>
+      <option value="Ing. Robótica">Ing. Robótica</option>
+      <option value="Medicina">Medicina</option>
+      <option value="Enfermería">Enfermería</option>
+      <option value="Fícica y matemáticas">Fícica y matemáticas</option>
+
+    </select>
+    <label for="Humanidades">Humanidades:</label>
+    <select id="Humanidades">
+      <option value="opcion1"></option>
+      <option value="opcion2">Economía</option>
+      <option value="opcion3">Filosofía</option>
+      <option value="opcion3">Derecho</option>
+
+    </select>
+    <label for="Bellas artes">Bellas artes:</label>
+    <select id="Bellas artes">
+      <option value="opcion1"></option>
+      <option value="opcion2">Pintura</option>
+      <option value="opcion3">Canto</option>
+      <option value="opcion4">Escultura</option>
+      <option value="opcion5">Baile</option>
+
+    </select>
+
+  </section>
+  <div class="cuadrado2">
+    <img id="img_23.png" src="img_23.png" onclick="redireccionar('indexColaboraciónConcreta.html')">
+    <button class="button-on-image1" onclick = "redireccionar('indexColaboraciónConcreta.html')">Ingresar</button>
+  </div>
+</div>
+<script>
+  function buscarGrupo() {
+    var e = document.getElementById("buscador").value.trim();
+    var selectCiencias = document.getElementById("Ciencias");
+    var cienciaSeleccionada = selectCiencias.options[selectCiencias.selectedIndex].value;
+
+    if (e === "") {
+      alert("Por favor introduzca un nombre de foro.");
+    } else if (cienciaSeleccionada === "Ing. Informática") {
+      window.location.href = "ruta-a-tu-pagina1.html";
+    }else {
+      alert("No existen foros de este tipo");
+    }
+  }
+  function redireccionar(direct){
+    window.location.href=direct;
+  }
+
+  function mostrarMenu() {
+
+    var opcion = prompt("¿En qué puedo ayudarle?\n1. Ver colaboracionesActivas\n2. Crear colaboración\n3. Ver foros favoritos\n4. Modificar sistema");
+    if (opcion === null || opcion === "") {
+
+      reiniciarTemporizador();
+    } else {
+      if(opcion === "1"){
+        window.location.href="indexListaColaboraciones.html";
+      }else if(opcion === "2"){
+        window.location.href="indexCrearColaboracion.html";
+      }else if(opcion === "3"){
+        window.location.href="indexMisForos.html";
+      }else if(location === "4"){
+        window.location.href="Ajustes.html";
+      }else{
+        reproducirAudio();
+        alert("Ninguna opcion seleccionada es valida");
+        mostrarMenu();
+      }
+    }
+  }
+  function reproducirAudio() {
+    var audioConfirmacion = new Audio('correct-156911.mp3');
+    audioConfirmacion.play();
+  }
+  reproducirAudio();
+  var temporizadorInactividad;function reiniciarTemporizador() {
+    clearTimeout(temporizadorInactividad);
+    temporizadorInactividad = setTimeout(mostrarMenu, 20000);
+  }
+  document.addEventListener('mousemove', reiniciarTemporizador);
+  reiniciarTemporizador();
+</script>
+</body>
+</html>

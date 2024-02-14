@@ -1,0 +1,436 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 200px;
+    height: 100vh;
+    color: #ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #3377d5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu-header {
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+    margin-top: 25px;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.menu-link {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    background-color: #3377d5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 19px;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+}
+
+.menu-link:hover,
+.menu-link:active {
+    background-color: #BC3FF6;
+    color: #25dccd;
+    border-radius: 10px;
+}
+
+.sub-menu-link {
+    margin-left: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+}
+
+.sub-menu-link:hover,
+.sub-menu-link:active {
+    background-color: #BC3FF6;
+    color: #25dccd;
+    border-radius: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    background: url('Picture@1x.png') no-repeat;
+    background-position: bottom left;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    color: white;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+    transition: opacity 0.5s; /* Agregamos la transición para la opacidad */
+}
+
+.menu-link.clicked {
+    color: #25dccd;
+    background-color: #BC3FF6;
+    border-radius: 10px;
+}
+
+#id_eng {
+    position: absolute;
+    top: 825px;
+    left: 53px;
+    width: 25px;
+    height: 19px;
+}
+
+#id_span {
+    position: absolute;
+    top: 825px;
+    left: 123px;
+    width: 25px;
+    height: 19px;
+}
+/* Estilos para el cuadrado */
+.cuadrado1 {
+    width: 125px;
+    height: 35px;
+    background-color: #ffffff; /* Puedes cambiar el color según tus preferencias */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -315px;
+    margin-left: -265px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuadrado1 p {
+    margin: 0;
+    color: #3377d5;
+    font-weight: bold;
+}
+
+.cuadrado2 {
+    width: 1125px;
+    height: 690px;
+    background-color: #ffffff; /* Puedes cambiar el color según tus preferencias */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -275px;
+    margin-left: -455px;
+    border-radius: 10px;
+}
+/* Transición para ocultar el contenido con opacidad al cambiar de ventana */
+#contenido.hide-content {
+    opacity: 0;
+    pointer-events: none; /* Desactivar interactividad con el contenido oculto */
+}
+/* Estilos para content1 */
+.button-on-image1 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 287px;
+    left: 93px;
+    width: 96px;
+    height: 35px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #3AE6C7;
+
+    text-align: center;
+    line-height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.button-on-image2 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 287px;
+    left: 530px;
+    width: 96px;
+    height: 35px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #3AE6C7;
+
+    text-align: center;
+    line-height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-on-image3 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 287px;
+    left: 970px;
+    width: 96px;
+    height: 35px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #3AE6C7;
+
+    text-align: center;
+    line-height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para content1 */
+.button-on-image4 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 287px;
+    left: 310px;
+    width: 96px;
+    height: 35px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #3AE6C7;
+
+    text-align: center;
+    line-height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.button-on-image5 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 287px;
+    left: 750px;
+    width: 96px;
+    height: 35px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #3AE6C7;
+
+    text-align: center;
+    line-height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-on-image6 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 616px;
+    left: 93px;
+    width: 96px;
+    height: 35px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #3AE6C7;
+
+    text-align: center;
+    line-height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-on-image7 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 616px;
+    left: 530px;
+    width: 96px;
+    height: 36px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #3AE6C7;
+
+    text-align: center;
+    line-height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.button-on-image8 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 616px;
+    left: 310px;
+    width: 96px;
+    height: 35px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #25dccd;
+    align-items: start;
+    text-align: center;
+    line-height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.fotos {
+    top: 20px;
+    position: absolute;
+    border: 2px solid #3377d5;
+    width: 180px;
+    height: 310px;
+    border-radius: 10px;
+}
+#fotos1 {
+
+    left: 35px;
+}
+#fotos2 {
+
+    left: 250px;
+}
+#fotos3 {
+
+    left: 470px;
+}
+#fotos4 {
+
+    left: 690px;
+}
+#fotos5 {
+
+    left: 910px;
+}
+#fotos6 {
+    top: 350px;
+    left: 35px;
+}
+#fotos7 {
+    top: 350px;
+    left: 250px;
+}
+#fotos8 {
+    top: 350px;
+    left: 470px;
+}
+.fotoGrupo {
+
+}
+.fotoGrupo {
+    margin-top: 10px;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+

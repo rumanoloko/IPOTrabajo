@@ -1,0 +1,195 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 200px;
+    height: 100vh;
+    color: #ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #3377d5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu-header {
+    margin-bottom: 30px;
+    font-size: 2em;
+    margin-top: 25px;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.menu-link {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    background-color: #3377d5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 19px;
+    opacity: 1;
+}
+
+.menu-link:hover,
+.menu-link:active {
+    background-color: #BC3FF6;
+    color: #25dccd;
+    border-radius: 10px;
+}
+
+.menu-link.clicked {
+    color: #25dccd;
+    background-color: #BC3FF6;
+    border-radius: 10px;
+}
+
+.sub-menu-link {
+    margin-left: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 1;
+}
+
+.sub-menu-link:hover,
+.sub-menu-link:active {
+    background-color: #BC3FF6;
+    color: #25dccd;
+    border-radius: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    background: url('Picture@1x.png') no-repeat;
+    background-position: bottom left;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.cuadrado1 {
+    width: 800px;
+    height: 50px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -410px;
+    margin-left: -455px;
+    border-radius: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.solicitud {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 400px; /* Ajustado a 400px */
+    height: 300px; /* Ajustado a 300px */
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 20px;
+    background-size: auto; /* Ajuste para la imagen de fondo */
+}
+
+.solicitud .content {
+    background-size: 100% 100%; /* Restaura el tamaño de la imagen de fondo solo para .solicitud */
+}
+
+.imagen-emisor {
+    width: 100px; /* Ajusta según sea necesario */
+    height: 100px; /* Ajusta según sea necesario */
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imagen-emisor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.informacion {
+    flex-grow: 1;
+}
+
+h2 {
+    color: #3377d5;
+}
+
+p {
+    margin: 10px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+.botones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    max-height: 200px;
+}
+
+.aceptar {
+    background-color: #4caf50;
+}
+
+.rechazar {
+    background-color: #f44336;
+}
+
+.masadelante {
+    background-color: #3377d5;
+}
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    background: url('Picture@1x.png') no-repeat;
+    background-position: bottom left;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    color: white;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+    transition: opacity 0.5s; /* Agregamos la transición para la opacidad */
+}

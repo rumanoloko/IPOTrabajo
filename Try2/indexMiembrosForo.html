@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Título</title>v
+    <link rel="stylesheet" type="text/css" href="stylesMiembrosForo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div id="menu">
+    <div id="menu-header">W4W</div>
+
+    <a href="#" class="menu-link" id="opcionColaboraciones" data-opcion="Colaboraciones">Colaboraciones</a>
+    <div class="subapartados visible" id="subColaboraciones">
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexlistaColaboraciones.html')">Activas</a>
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexCrearColaboracion.html')">Crear</a>
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexColaboracionesHistorial.html')">Historial</a>
+    </div>
+    <a href="#" class="menu-link" id="opcionForos" data-opcion="Foros">Foros</a>
+    <div class="subapartados visible" id="subForos">
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexMisForos.html')">Mis Foros</a>
+        <a href="#" class="sub-menu-link" id="salto2" onclick="redireccionar('indexAllForos.html')">Todos los Foros</a>
+    </div>
+    <a href="#" class="menu-link" id="opcionAjustes" data-opcion="Ajustes" onclick="redireccionar('Ajustes.html')">Ajustes</a>
+    <a href="#" class="menu-link" id="opcionPerfil" data-opcion="Perfil" onclick="redireccionar('Perfil.html')">Perfil</a>
+</div>
+
+<!-- Contenido de la página -->
+<div class="content" id="contenido1">
+    <!-- Agrega el cuadrado aquí -->
+    <img class="fotoGrupo" src="Image 23@1x.png">
+    <div class="cuadrado1">
+        <p>Programación</p>
+    </div>
+    <div class="cuadrado2">
+        <img class="fotos" id="fotos1" src="img.png">
+        <img class="fotos" id="fotos2" src="img_1.png">
+        <img class="fotos" id="fotos3" src="img_2.png">
+        <img class="fotos" id="fotos4" src="img_3.png">
+        <img class="fotos" id="fotos5" src="img_4.png">
+        <img class="fotos" id="fotos6" src="img_5.png">
+        <img class="fotos" id="fotos7" src="img_6.png">
+        <img class="fotos" id="fotos8" src="img_7.png">
+        <button class="button-on-image1" onclick = "nuevaColaboración()">Colaborar</button>
+        <button class="button-on-image2" onclick = "nuevaColaboración()">Colaborar</button>
+        <button class="button-on-image3" onclick = "nuevaColaboración()">Colaborar</button>
+
+        <button class="button-on-image4" onclick = "nuevaColaboración()">Colaborar</button>
+        <button class="button-on-image5" onclick = "nuevaColaboración()">Colaborar</button>
+        <button class="button-on-image6" onclick = "nuevaColaboración()">Colaborar</button>
+
+        <button class="button-on-image7" onclick = "nuevaColaboración()">Colaborar</button>
+        <button class="button-on-image8" onclick = "nuevaColaboración()">Colaborar</button>
+    </div>
+</div>
+<script>
+
+    function nuevaColaboración(){
+        window.location.href="indexCrearColaboración.html";
+    }
+    function redireccionar(direct){
+        window.location.href=direct;
+    }
+
+    function mostrarMenu() {
+
+        var opcion = prompt("¿En qué puedo ayudarle?\n1. Ver colaboracionesActivas\n2. Crear colaboración\n3. Ver foros favoritos\n4. Modificar sistema");
+        if (opcion === null || opcion === "") {
+
+            reiniciarTemporizador();
+        } else {
+            if(opcion === "1"){
+                window.location.href="indexListaColaboraciones.html";
+            }else if(opcion === "2"){
+                window.location.href="indexCrearColaboracion.html";
+            }else if(opcion === "3"){
+                window.location.href="indexMisForos.html";
+            }else if(location === "4"){
+                window.location.href="Ajustes.html";
+            }else{
+                reproducirAudio();
+                alert("Ninguna opcion seleccionada es valida");
+                mostrarMenu();
+            }
+        }
+    }
+
+    function reproducirAudio() {
+        var audioConfirmacion = new Audio('correct-156911.mp3');
+        audioConfirmacion.play();
+    }
+
+
+    reproducirAudio();
+
+
+    var temporizadorInactividad;
+
+
+    function reiniciarTemporizador() {
+
+        clearTimeout(temporizadorInactividad);
+
+        temporizadorInactividad = setTimeout(mostrarMenu, 20000);
+    }
+
+
+    document.addEventListener('mousemove', reiniciarTemporizador);
+
+
+    reiniciarTemporizador();
+</script>
+</body>
+</html>

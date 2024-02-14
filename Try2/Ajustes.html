@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Título</title>
+    <link rel="stylesheet" type="text/css" href="stylesPerfil.css">
+    <script src="scriptPerfil.js" defer></script>
+</head>
+<body>
+
+<div id="menu">
+    <div id="menu-header">W4W</div>
+
+    <a href="#" class="menu-link" id="opcionColaboraciones" data-opcion="Colaboraciones">Colaboraciones</a>
+    <div class="subapartados visible" id="subColaboraciones">
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexlistaColaboraciones.html')">Activas</a>
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexCrearColaboracion.html')">Crear</a>
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexColaboracionesHistorial.html')">Historial</a>
+    </div>
+    <a href="#" class="menu-link" id="opcionForos" data-opcion="Foros">Foros</a>
+    <div class="subapartados visible" id="subForos">
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexMisForos.html')">Mis Foros</a>
+        <a href="#" class="sub-menu-link" id="salto2" onclick="redireccionar('indexAllForos.html')">Todos los Foros</a>
+    </div>
+    <a href="#" class="menu-link" id="opcionAjustes" data-opcion="Ajustes" onclick="redireccionar('Ajustes.html')">Ajustes</a>
+    <a href="#" class="menu-link" id="opcionPerfil" data-opcion="Perfil" onclick="redireccionar('Perfil.html')">Perfil</a>
+</div>
+
+
+<div class="content" id="contenido">
+    <div class="cuadrado2">
+        <img id="id_FotoPerfil" src="img_30.png">
+        <input class="botonGuardarCambios" type="button" onclick="mostrarMensaje()">
+        <input class="botonAjuste" type="button" onclick="mostrarMensajeImposible()">
+        <input class="botonAjuste" type="button" onclick="mostrarMensajeImposible()">
+
+    </div>
+    <h1></h1>
+    <p></p>
+</div>
+<script>
+    function redireccionar(direct){
+        window.location.href=direct;
+    }
+</script>
+</body>
+</html>

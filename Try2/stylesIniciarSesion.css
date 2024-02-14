@@ -1,0 +1,99 @@
+.content {
+    margin-left: 0px;
+    padding: 20px;
+    background: url('img_17.png') no-repeat;
+    /*background-position: ;*/
+    background-size: 100% 100%;
+    min-height: 100vh;
+    color: white;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+    transition: opacity 0.5s; /* Agregamos la transición para la opacidad */
+    width: 1400px;
+    height: 450px;
+    margin-top: -5px;
+}
+
+/* Estilos para el cuadrado */
+.cuadrado1 {
+    width: 800px;
+    height: 50px;
+    background-color: #ffffff; /* Puedes cambiar el color según tus preferencias */
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 10px;
+}
+#id_FotoPerfil {
+    /* Modificar posición */
+    position: relative;
+    left: 50px;
+    top: 20px;
+
+    /* Modificar dimensiones */
+    width: 100px;
+    height: 751px;
+}
+
+/* Estilo para el primer texto y su posición */
+#texto1 {
+    width: 453px; /* ajusta el ancho según tus necesidades */
+    height: 35px; /* ajusta la altura según tus necesidades */
+    position: absolute;
+    top: 395px; /* ajusta la posición vertical según tus necesidades */
+    left: 90px; /* ajusta la posición horizontal según tus necesidades */
+}
+
+/* Estilo para el segundo texto y su posición */
+#texto2 {
+    width: 453px; /* ajusta el ancho según tus necesidades */
+    height: 35px; /* ajusta la altura según tus necesidades */
+    position: absolute;
+    top: 263px; /* ajusta la posición vertical según tus necesidades */
+    left: 90px; /* ajusta la posición horizontal según tus necesidades */
+}
+
+/* Estilo para el botón y su posición */
+button {
+    width: 325px; /* ajusta el ancho según tus necesidades */
+    height: 50px; /* ajusta la altura según tus necesidades */
+    position: absolute;
+    top: 613px; /* ajusta la posición vertical según tus necesidades */
+    left: 154px; /* ajusta la posición horizontal según tus necesidades */
+    /*background-color: transparent;*/
+    border-color: transparent;
+}
+
+
+.button1 {
+    width: 325px;
+    height: 50px;
+    position: absolute;
+    top: 613px;
+    left: 154px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.button2 {
+    width: 325px;
+    height: 50px;
+    position: absolute;
+    top: 480px;
+    left: 154px;
+    background-color: transparent;
+    border-color: transparent;
+
+}
+
+.button3 {
+    width: 325px;
+    height: 50px;
+    position: absolute;
+    top: 535px;
+    left: 154px;
+    background-color: transparent;
+    border-color: transparent;
+
+}

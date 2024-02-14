@@ -1,0 +1,275 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 200px;
+    height: 100vh;
+    color: #ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #3377d5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu-header {
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+    margin-top: 25px;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.menu-link {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    background-color: #3377d5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 19px;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+}
+
+#opcionColaboraciones {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+#opcionForos {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+#opcionAjustes {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+#opcionPerfil {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+.menu-link:hover,
+.menu-link:active {
+    background-color: #BC3FF6;
+    color: #25dccd;
+    border-radius: 10px;
+}
+.menu-link.clicked {
+    color: #25dccd; /* Color del texto al hacer clic */
+    background-color: #BC3FF6; /* Color de fondo al hacer clic */
+    border-radius: 10px;
+}
+
+.sub-menu-link {
+    margin-left: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+}
+
+.sub-menu-link:hover,
+.sub-menu-link:active {
+    background-color: #BC3FF6;
+    color: #25dccd;
+    border-radius: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    background: url('Picture@1x.png') no-repeat;
+    background-position: bottom left;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    color: white;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+    transition: opacity 0.5s; /* Agregamos la transición para la opacidad */
+}
+
+/* Estilos para el cuadrado */
+.cuadrado1 {
+    width: 800px;
+    height: 50px;
+    background-color: #ffffff; /* Puedes cambiar el color según tus preferencias */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -410px;
+    margin-left: -455px;
+    border-radius: 10px;
+}
+.cuadrado2{
+    margin-right: 600px;
+    margin-top:  600px;
+}
+.buscador {
+    width: 25px;
+    width: 700px;
+    background: #24303c;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: #ffffff;
+<!--box-shadow: 7px 13px 37px #ffffff;-->
+}
+.solicitudesRecibidas {
+    width: 800px;
+    width: 500px;
+    background: #3377d5;
+    padding: 10px;
+    margin: auto;
+    margin-top: -500px;
+    margin-right: 20px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: #ffffff;
+    box-shadow: 7px 13px 37px #ffffff;
+
+}
+
+.subBuscador {
+    width: 80%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 10px;
+}
+
+.botonBuscar {
+    width: 10%;
+    background: #268bcc;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 10px;
+    color: white;
+}
+.form-register {
+    width: 420px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 210px;
+    margin-left: -230px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+<!--box-shadow: 7px 13px 37px #000;-->
+}
+.sectionSubtipuri {
+    width: 95%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 10px;
+}
+
+.form-register .botonAceptar {
+    width: 30%;
+    background: #3eb09d;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+
+}
+.solicitudesRecibidas .botonAceptarSolicitud {
+    width: 30%;
+    background: #3eb09d;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.form-register .botonCancelar {
+    width: 30%;
+    background: #ff1b96;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    margin-right: -300px;
+    font-size: 16px;
+
+}
+.solicitudesRecibidas .botonCancelarSolicitud {
+    width: 30%;
+    background: #ff1b96;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    margin-right: -300px;
+    font-size: 16px;
+
+}
+#descripcion {
+    width: 50%;
+    padding: 70px;
+}
+.imagenes {
+    height: 200px;
+    width: 500px;
+}
+/*
+.custom-alert {
+    position: fixed;
+    top: 500px;
+    left: 500px;
+    background-color: yellow;
+    padding: 10px;
+    z-index: 9999;
+    display: none;
+}
+ */
+.solicitudesRecibidas .imagenes {
+    border-radius: 10px;
+}
+
+.mensaje {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00FF00; /* Color verde */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+.oculto {
+    display: none;
+}

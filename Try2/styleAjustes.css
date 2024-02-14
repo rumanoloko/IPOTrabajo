@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 200px;
+    height: 100vh;
+    color: #ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #3377d5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu-header {
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+    margin-top: 25px;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.menu-link {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    background-color: #3377d5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 19px;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+}
+
+#opcionColaboraciones {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+#opcionForos {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+#opcionAjustes {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+#opcionPerfil {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+.menu-link:hover,
+.menu-link:active {
+    background-color: #BC3FF6;
+    color: #25dccd;
+    border-radius: 10px;
+}
+.menu-link.clicked {
+    color: #25dccd; /* Color del texto al hacer clic */
+    background-color: #BC3FF6; /* Color de fondo al hacer clic */
+    border-radius: 10px;
+}
+
+.sub-menu-link {
+    margin-left: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+}
+
+.sub-menu-link:hover,
+.sub-menu-link:active {
+    background-color: #BC3FF6;
+    color: #25dccd;
+    border-radius: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    background: url('Picture@1x.png') no-repeat;
+    background-position: bottom left;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    color: white;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+    transition: opacity 0.5s; /* Agregamos la transición para la opacidad */
+}
+
+/* Estilos para el cuadrado */
+.cuadrado1 {
+    width: 800px;
+    height: 50px;
+    background-color: #ffffff; /* Puedes cambiar el color según tus preferencias */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -410px;
+    margin-left: -455px;
+    border-radius: 10px;
+}
+
+
+.botonGuardarCambios {
+    position: absolute;
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.botonAjuste {
+    position: absolute;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}

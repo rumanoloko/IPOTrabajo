@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="namepost" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tu Título</title>
+  <link rel="stylesheet" type="text/css" href="styleColaboracionesCrear.css">
+  <script src="scriptCrearColaboracion.js" defer></script>
+</head>
+<body>
+
+<div id="menu">
+  <div id="menu-header">W4W</div>
+
+  <a href="#" class="menu-link" id="opcionColaboraciones" data-opcion="Colaboraciones">Colaboraciones</a>
+  <div class="subapartados visible" id="subColaboraciones">
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexlistaColaboraciones.html')">Activas</a>
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexCrearColaboracion.html')">Crear</a>
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexColaboracionesHistorial.html')">Historial</a>
+  </div>
+  <a href="#" class="menu-link" id="opcionForos" data-opcion="Foros">Foros</a>
+  <div class="subapartados visible" id="subForos">
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexMisForos.html')">Mis Foros</a>
+    <a href="#" class="sub-menu-link" id="salto2" onclick="redireccionar('indexAllForos.html')">Todos los Foros</a>
+  </div>
+  <a href="#" class="menu-link" id="opcionAjustes" data-opcion="Ajustes" onclick="redireccionar('Ajustes.html')">Ajustes</a>
+  <a href="#" class="menu-link" id="opcionPerfil" data-opcion="Perfil" onclick="redireccionar('Perfil.html')">Perfil</a>
+</div>
+
+
+<div class="content" id="contenido">
+  <div class="cuadrado2">
+    <section class="buscador">
+      <input class="subBuscador" type="text" name="descripcion" id="buscador" placeholder="Indique aquí la persona que quiere buscar">
+      <input class="botonBuscar" type="submit" value="Buscar" id="buscar" onclick="redireccionarPerfil()">
+    </section>
+    <section class="form-register">
+      <h4>Crear solicitud de Colaboración</h4>
+      <input class="sectionSubtipuri" type="text" name="nombresEmisor" id="nombresEmisor" placeholder="Ingrese emisor de solicitud">
+      <input class="sectionSubtipuri" type="text" name="especialidadEmisor" id="especialidadEmisor" placeholder="Ingrese especialidad ofrecida">
+      <input class="sectionSubtipuri" type="text" name="nombresReceptor" id="nombresReceptor" placeholder="Ingrese receptor de solicitud">
+      <input class="sectionSubtipuri" type="text" name="especialidadReceptor" id="especialidadReceptor" placeholder="Ingrese especialidad demandada">
+      <input class="sectionSubtipuri" type="text" name="fechaFin" id="fechaFin" placeholder="Ingrese fin de la colaboracion">
+      <input class="sectionSubtipuri" type="textarea" name="descripcion" id="descripcion" placeholder="Ingrese breve descripción">
+      <input class="botonAceptar" type="submit" value="Aceptar" id="aceptar" onclick="solicitudEnviada()">
+      <input class="botonCancelar" type="submit" value="Cancelar" id="cancelar" onclick="reproducirAudio()">
+    </section>
+    <section class="solicitudesRecibidas">
+      <h4>Solicitudes pendientes</h4>
+      <img class="imagenes" src="img_21.png" id="foto1" alt="Imagen 1">
+      <input class="botonAceptarSolicitud" type="submit" value="Aceptar" id="Aceptar1" onclick="aceptarSolicitud('foto1', 'Aceptar1', 'Rechazar1')">
+      <input class="botonCancelarSolicitud" type="submit" value="Rechazar" id="Rechazar1" onclick="eliminarSolicitud('foto1', 'Aceptar1', 'Rechazar1')">
+      <img class="imagenes" src="img_22.png" id="foto2" alt="Imagen 1">
+      <input class="botonAceptarSolicitud" type="submit" value="Aceptar" id="Aceptar2" onclick="aceptarSolicitud('foto2', 'Aceptar2', 'Rechazar2')">
+      <input class="botonCancelarSolicitud" type="submit" value="Rechazar" id="Rechazar2" onclick="eliminarSolicitud('foto2', 'Aceptar2', 'Rechazar2')">
+    </section>
+  </div>
+  <div id="mensaje" class="mensaje oculto">
+    Mensaje mostrado
+  </div>
+</div>
+<script>
+  function redireccionar(direct){
+    window.location.href=direct;
+  }
+  function eliminarSolicitud(idImagen, idBotonAceptar, idBotonRechazar) {
+    var audio = new Audio('correct-156911.mp3');
+    audio.play();
+    var imagen = document.getElementById(idImagen);
+    var botonAceptar = document.getElementById(idBotonAceptar);
+    var botonRechazar = document.getElementById(idBotonRechazar);
+
+    imagen.style.display = 'none';
+    botonAceptar.style.display = 'none';
+    botonRechazar.style.display = 'none';
+  }
+  function aceptarSolicitud(idImagen, idBotonAceptar, idBotonRechazar) {
+    var audio = new Audio('yeah-boy-114748.mp3');
+    audio.play();
+    var imagen = document.getElementById(idImagen);
+    var botonAceptar = document.getElementById(idBotonAceptar);
+    var botonRechazar = document.getElementById(idBotonRechazar);
+
+    imagen.style.display = 'none';
+    botonAceptar.style.display = 'none';
+    botonRechazar.style.display = 'none';
+  }
+
+  function solicitudEnviada() {
+    var e = document.getElementById("nombresEmisor").value.trim();
+    var r = document.getElementById("especialidadEmisor").value.trim();
+    var ee = document.getElementById("nombresReceptor").value.trim();
+    var er = document.getElementById("especialidadReceptor").value.trim();
+    var f = document.getElementById("fechaFin").value.trim();
+    var d = document.getElementById("descripcion").value.trim();
+
+    if (e === "" || r === "" || ee === "" || er === "" || f === "" || d === "") {
+      reproducirSonido();
+      alert("Por favor complete todos los campos antes de enviar la solicitud.");
+      document.getElementById("nombresEmisor").value="";
+      e.value = "";
+      r.value = "";
+      ee.value = "";
+      er.value = "";
+      f.value = "";
+      d.value = "";
+    } else {
+      reproducirAudio();
+      alert("La solicitud fue enviada");
+    }
+  }
+  function redireccionarPerfil(){
+    var description = document.getElementById("buscador").value;
+    if(description.trim() !== ""){
+      window.location.href="Perfil.html";
+    }else{
+      alert("No se puede buscar un usuario si no indica ningún nombre, por favor repita el proceso");
+      reproducirSonido();
+    }
+  }
+  function reproducirSonido(){
+    var audioError = new Audio('system-error-notice-132470.mp3');
+    audioError.play();
+  }
+</script>
+<script>
+  function redireccionar(direct){
+    window.location.href=direct;
+  }
+  function mostrarMenu() {
+    var opcion = prompt("¿En qué puedo ayudarle?\n1. Ver colaboracionesActivas\n2. Crear colaboración\n3. Ver foros favoritos\n4. Modificar sistema");
+    if (opcion === null || opcion === "") {
+      reiniciarTemporizador();
+    } else {
+      if(opcion === "1"){
+        window.location.href="indexListaColaboraciones.html";
+      }else if(opcion === "2"){
+        window.location.href="indexCrearColaboracion.html";
+      }else if(opcion === "3"){
+        window.location.href="indexMisForos.html";
+      }else if(location === "4"){
+        window.location.href="Ajustes.html";
+      }else{
+        reproducirAudio();
+        alert("Ninguna opcion seleccionada es valida");
+        mostrarMenu();
+      }
+    }
+  }
+  function reproducirAudio() {
+    var audioConfirmacion = new Audio('correct-156911.mp3');
+    audioConfirmacion.play();
+  }
+
+  reproducirAudio();
+
+  var temporizadorInactividad;
+
+   function reiniciarTemporizador() {
+    clearTimeout(temporizadorInactividad);
+    temporizadorInactividad = setTimeout(mostrarMenu, 20000); // 5 segundos
+  }
+
+  document.addEventListener('mousemove', reiniciarTemporizador);
+
+ reiniciarTemporizador();
+</script>
+</body>
+</html>

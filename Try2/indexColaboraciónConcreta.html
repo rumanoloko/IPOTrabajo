@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tu Título</title>
+  <link rel="stylesheet" type="text/css" href="styleChatAntes.css">
+</head>
+<body>
+
+<div id="menu">
+  <div id="menu-header">W4W</div>
+
+  <a href="#" class="menu-link" id="opcionColaboraciones" data-opcion="Colaboraciones">Colaboraciones</a>
+  <div class="subapartados visible" id="subColaboraciones">
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexlistaColaboraciones.html')">Activas</a>
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexCrearColaboracion.html')">Crear</a>
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexColaboracionesHistorial.html')">Historial</a>
+  </div>
+  <a href="#" class="menu-link" id="opcionForos" data-opcion="Foros">Foros</a>
+  <div class="subapartados visible" id="subForos">
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexMisForos.html')">Mis Foros</a>
+    <a href="#" class="sub-menu-link" id="salto2" onclick="redireccionar('indexAllForos.html')">Todos los Foros</a>
+  </div>
+  <a href="#" class="menu-link" id="opcionAjustes" data-opcion="Ajustes" onclick="redireccionar('Ajustes.html')">Ajustes</a>
+  <a href="#" class="menu-link" id="opcionPerfil" data-opcion="Perfil" onclick="redireccionar('Perfil.html')">Perfil</a>
+</div>
+
+
+<div class="content" id="contenido">
+  <div class="cuadrado2">
+    <input id="boronAceptar" type="text" placeholder="6.7">
+    <input id="introducirTexto" type="button" value="Guardar" onclick="notificacion()">
+    <input id="linkul" type="button" value="" onclick="viajarFuncion('https://github.com/cyberus-technology/virtualbox-kvm')">
+  </div>
+  <h1></h1>
+  <p></p>
+</div>
+<script>
+  function viajarFuncion(direct){
+    window.location.href=direct;
+  }
+  function notificacion(){
+    alert("¡La nota temporal se almacenó exitosamente!")
+  }
+  function redireccionar(direct){
+    window.location.href=direct;
+  }
+  function mostrarMenu() {
+    var opcion = prompt("¿En qué puedo ayudarle?\n1. Ver colaboracionesActivas\n2. Crear colaboración\n3. Ver foros favoritos\n4. Modificar sistema");
+    if (opcion === null || opcion === "") {
+      reiniciarTemporizador();
+    } else {
+      if(opcion === "1"){
+        window.location.href="indexListaColaboraciones.html";
+      }else if(opcion === "2"){
+        window.location.href="indexCrearColaboracion.html";
+      }else if(opcion === "3"){
+        window.location.href="indexMisForos.html";
+      }else if(location === "4"){
+        window.location.href="Ajustes.html";
+      }else{
+        reproducirAudio();
+        alert("Ninguna opcion seleccionada es valida");
+        mostrarMenu();
+      }
+    }
+  }
+  function reproducirAudio() {
+    var audioConfirmacion = new Audio('correct-156911.mp3');
+    audioConfirmacion.play();
+  }
+reproducirAudio();
+
+  var temporizadorInactividad;
+
+  function reiniciarTemporizador() {
+    clearTimeout(temporizadorInactividad);
+    temporizadorInactividad = setTimeout(mostrarMenu, 20000); // 5 segundos
+  }
+  document.addEventListener('mousemove', reiniciarTemporizador);
+
+  reiniciarTemporizador();
+</script>
+</body>
+</html>

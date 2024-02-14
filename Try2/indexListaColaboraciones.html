@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tu Título</title>
+  <link rel="stylesheet" type="text/css" href="stileListaColaboraciones.css">
+  <script src="scriptListaColaboraciones.js" defer></script>
+</head>
+<body>
+
+<div id="menu">
+  <div id="menu-header">W4W</div>
+
+  <a href="#" class="menu-link" id="opcionColaboraciones" data-opcion="Colaboraciones">Colaboraciones</a>
+  <div class="subapartados visible" id="subColaboraciones">
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexlistaColaboraciones.html')">Activas</a>
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexCrearColaboracion.html')">Crear</a>
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexColaboracionesHistorial.html')">Historial</a>
+  </div>
+  <a href="#" class="menu-link" id="opcionForos" data-opcion="Foros">Foros</a>
+  <div class="subapartados visible" id="subForos">
+    <a href="#" class="sub-menu-link" onclick="redireccionar('indexMisForos.html')">Mis Foros</a>
+    <a href="#" class="sub-menu-link" id="salto2" onclick="redireccionar('indexAllForos.html')">Todos los Foros</a>
+  </div>
+  <a href="#" class="menu-link" id="opcionAjustes" data-opcion="Ajustes" onclick="redireccionar('Ajustes.html')">Ajustes</a>
+  <a href="#" class="menu-link" id="opcionPerfil" data-opcion="Perfil" onclick="redireccionar('Perfil.html')">Perfil</a>
+</div>
+
+
+<div class="content" id="contenido">
+  <div class="cuadrado2">
+    <section class="solicitudesRecibidas">
+      <h4>Colaboraciones activas</h4>
+      <img class="imagenes" src="img_21.png" id="foto1" alt="Imagen 1" onclick="redireccionar('indexColaboraciónConcreta.html')">
+      <input class="botonAceptarSolicitud" type="submit" value="Reportar" id="Aceptar1" onclick="mostrarMensaje()">
+
+      <img class="imagenes" src="img_22.png" id="foto2" alt="Imagen 1" onclick="redireccionar('indexColaboraciónConcreta.html')">
+      <input class="botonAceptarSolicitud" type="submit" value="Reportar" id="Aceptar2" onclick="mostrarMensaje()">
+    </section>
+  </div>
+</div>
+<script>
+
+  function mostrarMensaje() {
+    var causaReporte = prompt("Por favor, selecciona la causa del reporte:\n1. Problemas de lenguaje\n2. Falta de colaboración.\n3. Intento de engaño\n4. Otras causas");
+    if (causaReporte !== null && causaReporte !== "") {
+      switch (causaReporte) {
+        case "1":
+          alert("¡Muchas gracias por la información! Estamos intentando todo lo posible para resolver este problema.\nUsuario reportado por: Problemas de lenguaje");
+          break;
+        case "2":
+          alert("¡Muchas gracias por la información! Estamos intentando todo lo posible para resolver este problema.\nUsuario reportado por: Falta de colaboración");
+          break;
+        case "3":
+          alert("¡Muchas gracias por la información! Estamos intentando todo lo posible para resolver este problema.\nUsuario reportado por: Intento de engaño");
+          break;
+        default:
+          var otraCausa = prompt("Por favor, ingresa otra causa del reporte:");
+          if (otraCausa !== null && otraCausa !== "") {
+            alert("¡Muchas gracias por la información! Estamos intentando todo lo posible para resolver este problema.\nUsuario reportado por: " + otraCausa);
+          } else {
+            alert("Reporte cancelado.");
+          }
+          break;
+      }
+    } else {
+      alert("Reporte cancelado.");
+    }
+  }
+  function redireccionar(direct){
+    window.location.href=direct;
+  }
+  function mostrarColaboracion(){
+    window.location.href="indexColaboracionConcreta";
+  }
+  function mostrarMenu() {
+    var opcion = prompt("¿En qué puedo ayudarle?\n1. Ver colaboracionesActivas\n2. Crear colaboración\n3. Ver foros favoritos\n4. Modificar sistema");
+    if (opcion === null || opcion === "") {
+      reiniciarTemporizador();
+    } else {
+      if(opcion === "1"){
+        window.location.href="indexListaColaboraciones.html";
+      }else if(opcion === "2"){
+        window.location.href="indexCrearColaboracion.html";
+      }else if(opcion === "3"){
+        window.location.href="indexMisForos.html";
+      }else if(location === "4"){
+        window.location.href="Ajustes.html";
+      }else{
+        reproducirAudio();
+        alert("Ninguna opcion seleccionada es valida");
+        mostrarMenu();
+      }
+    }
+  }
+
+  function reproducirAudio() {
+    var audioConfirmacion = new Audio('correct-156911.mp3');
+    audioConfirmacion.play();
+  }
+  reproducirAudio();
+  var temporizadorInactividad;
+  function reiniciarTemporizador() {
+    clearTimeout(temporizadorInactividad);
+    temporizadorInactividad = setTimeout(mostrarMenu, 20000);
+  }
+  document.addEventListener('mousemove', reiniciarTemporizador);
+  reiniciarTemporizador();
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 200px;
+    height: 100vh;
+    color: #ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #3377d5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu-header {
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+    margin-top: 25px;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.menu-link {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    background-color: #3377d5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 19px;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+}
+
+#opcionColaboraciones {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+#opcionForos {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+#opcionAjustes {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+#opcionPerfil {
+    margin-top: 20px;
+    color: #BC3FF6; /* Cambiamos text-color a color */
+}
+
+.menu-link:hover,
+.menu-link:active {
+    background-color: #BC3FF6;
+    color: #25dccd;
+    border-radius: 10px;
+}
+.menu-link.clicked {
+    color: #25dccd; /* Color del texto al hacer clic */
+    background-color: #BC3FF6; /* Color de fondo al hacer clic */
+    border-radius: 10px;
+}
+
+.sub-menu-link {
+    margin-left: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+}
+
+.sub-menu-link:hover,
+.sub-menu-link:active {
+    background-color: #BC3FF6;
+    color: #25dccd;
+    border-radius: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    background: url('Picture@1x.png') no-repeat;
+    background-position: bottom left;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    color: white;
+    opacity: 1; /* Agregamos la propiedad de opacidad */
+    transition: opacity 0.5s; /* Agregamos la transición para la opacidad */
+}
+
+/* Estilos para el cuadrado */
+.cuadrado1 {
+    width: 800px;
+    height: 50px;
+    background-color: #ffffff; /* Puedes cambiar el color según tus preferencias */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -410px;
+    margin-left: -455px;
+    border-radius: 10px;
+}
+.cuadrado2 {
+    width: 840px;
+    height: 760px;
+    background-color: #ffffff; /* Puedes cambiar el color según tus preferencias */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -320px;
+    margin-left: -455px;
+    border-radius: 10px;
+}
+#id_ForoSociologia {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 700px;
+    height: 240px;
+}
+
+#id_ForoIA {
+    position: absolute;
+    top: 280px;
+    left: 20px;
+    width: 700px;
+    height: 240px;
+}
+#id_ForoProgramacion {
+    position: absolute;
+    top: 535px;
+    left: 20px;
+    width: 700px;
+    height: 220px;
+}
+
+/* Estilos para content1 */
+.button-on-image1 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 223px;
+    left: 653px;
+    width: 120px;
+    height: 30px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #ff1b96;
+
+    text-align: center;
+    line-height: 50%;
+
+}
+.button-on-image2 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 480px;
+    left: 653px;
+    width: 120px;
+    height: 30px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #ff1b96;
+
+    text-align: center;
+    line-height: 50%;
+
+}
+.button-on-image3 {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Ajusta la posición horizontal del botón */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer;
+
+    /* Personaliza el tamaño y las coordenadas según sea necesario */
+    top: 715px;
+    left: 653px;
+    width: 120px;
+    height: 30px;
+    bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #ff1b96;
+
+    text-align: center;
+    line-height: 50%;
+
+}
+#id_eng {
+    position: absolute;
+    top: 825px;
+    left: 53px;
+    width: 25px;
+    height: 19px;
+}
+
+#id_span {
+    position: absolute;
+    top: 825px;
+    left: 123px;
+    width: 25px;
+    height: 19px;
+}
+.buscador {
+    width: 20px;
+    width: 700px;
+    background: #24303c;
+    padding: 10px;
+    margin: auto;
+    margin-top: 0px;
+    margin-left: 36px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: #ffffff;
+<!--box-shadow: 7px 13px 37px #ffffff;-->
+}
+.subBuscador {
+    width: 80%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 10px;
+}
+
+.botonBuscar {
+    width: 10%;
+    background: #268bcc;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 10px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+

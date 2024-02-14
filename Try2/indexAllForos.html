@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Título</title>
+    <link rel="stylesheet" type="text/css" href="styleAllForos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div id="menu">
+    <div id="menu-header">W4W</div>
+
+    <a href="#" class="menu-link" id="opcionColaboraciones" data-opcion="Colaboraciones">Colaboraciones</a>
+    <div class="subapartados visible" id="subColaboraciones">
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexlistaColaboraciones.html')">Activas</a>
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexCrearColaboracion.html')">Crear</a>
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexColaboracionesHistorial.html')">Historial</a>
+    </div>
+    <a href="#" class="menu-link" id="opcionForos" data-opcion="Foros">Foros</a>
+    <div class="subapartados visible" id="subForos">
+        <a href="#" class="sub-menu-link" onclick="redireccionar('indexMisForos.html')">Mis Foros</a>
+        <a href="#" class="sub-menu-link" id="salto2" onclick="redireccionar('indexAllForos.html')">Todos los Foros</a>
+    </div>
+    <a href="#" class="menu-link" id="opcionAjustes" data-opcion="Ajustes" onclick="redireccionar('Ajustes.html')">Ajustes</a>
+    <a href="#" class="menu-link" id="opcionPerfil" data-opcion="Perfil" onclick="redireccionar('Perfil.html')">Perfil</a>
+</div>
+
+<!-- Contenido de la página -->
+<div class="content" id="contenido1">
+    <!-- Agrega el cuadrado aquí -->
+    <section class="buscador">
+        <input class="subBuscador" type="text" name="descripcion" id="buscador" placeholder="Indique aquí el grupo que quiere buscar">
+        <input class="botonBuscar" type="submit" value="Buscar" id="buscar" onclick="buscarGrupo()">
+        <label for="Ciencias">Cliencias:</label>
+        <select id="Ciencias">
+            <option value=""></option>
+            <option value="Ing. Informática">Ing. Informática</option>
+            <option value="Ing. Eléctrica">Ing. Eléctrica</option>
+            <option value="Ing. Mecánica">Ing. Mecánica</option>
+            <option value="Ing. de fluidos">Ing. de fluidos</option>
+            <option value="Ing. Electrónica">Ing. Electrónica</option>
+            <option value="Ing. Robótica">Ing. Robótica</option>
+            <option value="Medicina">Medicina</option>
+            <option value="Enfermería">Enfermería</option>
+            <option value="Fícica y matemáticas">Fícica y matemáticas</option>
+            <!-- Agrega más opciones aquí -->
+        </select>
+        <label for="Humanidades">Humanidades:</label>
+        <select id="Humanidades">
+            <option value="opcion1"></option>
+            <option value="opcion2">Economía</option>
+            <option value="opcion3">Filosofía</option>
+            <option value="opcion3">Derecho</option>
+            <!-- Agrega más opciones aquí -->
+        </select>
+        <label for="Bellas artes">Bellas artes:</label>
+        <select id="Bellas artes">
+            <option value="opcion1"></option>
+            <option value="opcion2">Pintura</option>
+            <option value="opcion3">Canto</option>
+            <option value="opcion4">Escultura</option>
+            <option value="opcion5">Baile</option>
+            <!-- Agrega más opciones aquí -->
+        </select>
+
+    </section>
+    <div class="cuadrado2">
+        <img id="id_AllForos1" src="AllForos1.png">
+            <button class="button-on-image1" onclick = "redireccionar('indexColaboraciónConcreta.html')">Ingresar</button>
+            <button class="button-on-image2" onclick = "redireccionar('indexColaboraciónConcreta.html')">Ingresar</button>
+            <button class="button-on-image3" onclick = "redireccionar('indexColaboraciónConcreta.html')">Ingresar</button>
+        <img id="id_AllForos2" src="AllForos2.png">
+            <button class="button-on-image4" onclick = "redireccionar('indexColaboraciónConcreta.html')">Ingresar</button>
+            <button class="button-on-image5" onclick = "redireccionar('indexColaboraciónConcreta.html')">Ingresar</button>
+            <button class="button-on-image6" onclick = "redireccionar('indexColaboraciónConcreta.html')">Ingresar</button>
+    </div>
+</div>
+<script>
+    function buscarGrupo() {
+        var e = document.getElementById("buscador").value.trim();
+        var selectCiencias = document.getElementById("Ciencias");
+        var cienciaSeleccionada = selectCiencias.options[selectCiencias.selectedIndex].value;
+
+        if (e === "") {
+            reproducirError();
+            alert("Por favor introduzca un nombre de foro.");
+        } else if (cienciaSeleccionada === "Ing. Informática") {
+            window.location.href = "indexForoConcreto.html";
+        }else {
+            reproducirAfirmacion();
+            alert("No existen foros de este tipo");
+        }
+    }
+</script>
+<script>
+    function redireccionar(direct){
+        reproducirAfirmacion();
+        window.location.href=direct;
+    }
+    function mostrarMenu() {
+       var opcion = prompt("¿En qué puedo ayudarle?\n1. Ver colaboracionesActivas\n2. Crear colaboración\n3. Ver foros favoritos\n4. Modificar sistema");
+        if (opcion === null || opcion === "") {
+            reiniciarTemporizador();
+        } else {
+            if(opcion === "1"){
+                window.location.href="indexListaColaboraciones.html";
+            }else if(opcion === "2"){
+                window.location.href="indexCrearColaboracion.html";
+            }else if(opcion === "3"){
+                window.location.href="indexMisForos.html";
+            }else if(location === "4"){
+                window.location.href="Ajustes.html";
+            }else{
+                reproducirError();
+                alert("Ninguna opcion seleccionada es valida");
+                mostrarMenu();
+            }
+        }
+    }
+    function reproducirAfirmacion() {
+        var audioConfirmacion = new Audio('correct-156911.mp3');
+        audioConfirmacion.play();
+    }
+    function reproducirError() {
+        var audioConfirmacion = new Audio('system-error-notice-132470.mp3');
+        audioConfirmacion.play();
+    }
+    reproducirAudio();
+    var temporizadorInactividad;
+    function reiniciarTemporizador() {
+
+        clearTimeout(temporizadorInactividad);
+
+        temporizadorInactividad = setTimeout(mostrarMenu, 20000); // 5 segundos
+    }
+    document.addEventListener('mousemove', reiniciarTemporizador);
+    reiniciarTemporizador();
+</script>
+</body>
+</html>
