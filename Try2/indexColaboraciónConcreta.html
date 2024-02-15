@@ -31,6 +31,7 @@
     <input id="boronAceptar" type="text" placeholder="6.7">
     <input id="introducirTexto" type="button" value="Guardar" onclick="notificacion()">
     <input id="linkul" type="button" value="" onclick="viajarFuncion('https://github.com/cyberus-technology/virtualbox-kvm')">
+   <input id="linkMiembrosForo" type="button"value="" onclick="redireccionar('indexMiembrosForo.html')">
   </div>
   <h1></h1>
   <p></p>
@@ -75,7 +76,7 @@ reproducirAudio();
 
   function reiniciarTemporizador() {
     clearTimeout(temporizadorInactividad);
-    temporizadorInactividad = setTimeout(mostrarMenu, 20000); // 5 segundos
+    temporizadorInactividad = setTimeout(mostrarMenu, 20000);
   }
   document.addEventListener('mousemove', reiniciarTemporizador);
 

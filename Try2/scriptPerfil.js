@@ -1,5 +1,5 @@
 function mostrarMenu() {
-    var opcion = prompt("¿En qué puedo ayudarle?\n1. Ver colaboracionesActivas\n2. Crear colaboración\n3. Ver foros favoritos\n4. Modificar sistema");
+    var opcion = prompt("¿En qué puedo ayudarle?\n1. Ver colaboraciones activas\n2. Crear colaboración\n3. Ver foros favoritos\n4. Modificar sistema");
     if (opcion === null || opcion === "") {
         reiniciarTemporizador();
     } else {

@@ -48,14 +48,14 @@ body {
 .menu-link {
     margin: 5px;
     cursor: pointer;
-    background-color: #3377d5; /* Color de fondo predeterminado */
+    background-color: #3377d5;
     border-radius: 5px;
     text-align: left;
 }
 
 .menu-link.clicked {
-    color: #25dccd; /* Color del texto al hacer clic */
-    background-color: #BC3FF6; /* Color de fondo al hacer clic */
+    color: #25dccd;
+    background-color: #BC3FF6;
     border-radius: 10px;
 }
 
@@ -74,11 +74,10 @@ body {
     width: 25px;
     height: 19px;
 }
-/* Estilos para el cuadrado */
 .cuadrado1 {
     width: 800px;
     height: 50px;
-    background-color: #ffffff; /* Puedes cambiar el color según tus preferencias */
+    background-color: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -89,7 +88,7 @@ body {
 .cuadrado2 {
     width: 1125px;
     height: 800px;
-    background-color: #ffffff; /* Puedes cambiar el color según tus preferencias */
+    background-color: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -111,20 +110,16 @@ body {
     width: 1000px;
     height: 350px;
 }
-
-/* Estilos para content1 */
 .button-on-image1 {
     position: absolute;
-    bottom: 10px; /* Ajusta la posición vertical del botón */
-    left: 50%; /* Ajusta la posición horizontal del botón */
-    transform: translateX(-50%); /* Centra el botón horizontalmente */
-    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
-    background-color: #3498db; /* Color de fondo del botón */
-    color: #ffffff; /* Color del texto del botón */
-    border: none; /* Quita el borde del botón */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
     cursor: pointer;
-
-    /* Personaliza el tamaño y las coordenadas según sea necesario */
     top: 332px;
     left: 322px;
     width: 96px;
@@ -141,16 +136,14 @@ body {
 }
 .button-on-image2 {
     position: absolute;
-    bottom: 10px; /* Ajusta la posición vertical del botón */
-    left: 50%; /* Ajusta la posición horizontal del botón */
-    transform: translateX(-50%); /* Centra el botón horizontalmente */
-    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
-    background-color: #3498db; /* Color de fondo del botón */
-    color: #ffffff; /* Color del texto del botón */
-    border: none; /* Quita el borde del botón */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
     cursor: pointer;
-
-    /* Personaliza el tamaño y las coordenadas según sea necesario */
     top: 332px;
     left: 663px;
     width: 96px;
@@ -167,16 +160,14 @@ body {
 }
 .button-on-image3 {
     position: absolute;
-    bottom: 10px; /* Ajusta la posición vertical del botón */
-    left: 50%; /* Ajusta la posición horizontal del botón */
-    transform: translateX(-50%); /* Centra el botón horizontalmente */
-    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
-    background-color: #3498db; /* Color de fondo del botón */
-    color: #ffffff; /* Color del texto del botón */
-    border: none; /* Quita el borde del botón */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
     cursor: pointer;
-
-    /* Personaliza el tamaño y las coordenadas según sea necesario */
     top: 332px;
     left: 1006px;
     width: 96px;
@@ -191,20 +182,16 @@ body {
     line-height: 50%;
 
 }
-
-/* Estilos para content1 */
 .button-on-image4 {
     position: absolute;
-    bottom: 10px; /* Ajusta la posición vertical del botón */
-    left: 50%; /* Ajusta la posición horizontal del botón */
-    transform: translateX(-50%); /* Centra el botón horizontalmente */
-    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
-    background-color: #3498db; /* Color de fondo del botón */
-    color: #ffffff; /* Color del texto del botón */
-    border: none; /* Quita el borde del botón */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
     cursor: pointer;
-
-    /* Personaliza el tamaño y las coordenadas según sea necesario */
     top: 727px;
     left: 322px;
     width: 96px;
@@ -221,16 +208,14 @@ body {
 }
 .button-on-image5 {
     position: absolute;
-    bottom: 10px; /* Ajusta la posición vertical del botón */
-    left: 50%; /* Ajusta la posición horizontal del botón */
-    transform: translateX(-50%); /* Centra el botón horizontalmente */
-    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
-    background-color: #3498db; /* Color de fondo del botón */
-    color: #ffffff; /* Color del texto del botón */
-    border: none; /* Quita el borde del botón */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
     cursor: pointer;
-
-    /* Personaliza el tamaño y las coordenadas según sea necesario */
     top: 727px;
     left: 663px;
     width: 96px;
@@ -247,16 +232,14 @@ body {
 }
 .button-on-image6 {
     position: absolute;
-    bottom: 10px; /* Ajusta la posición vertical del botón */
-    left: 50%; /* Ajusta la posición horizontal del botón */
-    transform: translateX(-50%); /* Centra el botón horizontalmente */
-    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
-    background-color: #3498db; /* Color de fondo del botón */
-    color: #ffffff; /* Color del texto del botón */
-    border: none; /* Quita el borde del botón */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
     cursor: pointer;
-
-    /* Personaliza el tamaño y las coordenadas según sea necesario */
     top: 727px;
     left: 1006px;
     width: 96px;

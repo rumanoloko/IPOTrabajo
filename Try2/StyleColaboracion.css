@@ -113,21 +113,21 @@ body {
 .solicitud {
     border: 1px solid #ccc;
     padding: 20px;
-    width: 400px; /* Ajustado a 400px */
-    height: 300px; /* Ajustado a 300px */
+    width: 400px;
+    height: 300px;
     border-radius: 8px;
     display: flex;
     margin-bottom: 20px;
-    background-size: auto; /* Ajuste para la imagen de fondo */
+    background-size: auto;
 }
 
 .solicitud .content {
-    background-size: 100% 100%; /* Restaura el tamaño de la imagen de fondo solo para .solicitud */
+    background-size: 100% 100%;
 }
 
 .imagen-emisor {
-    width: 100px; /* Ajusta según sea necesario */
-    height: 100px; /* Ajusta según sea necesario */
+    width: 100px;
+    height: 100px;
     margin-right: 20px;
     border-radius: 50%;
     overflow: hidden;
@@ -190,6 +190,6 @@ label {
     background-size: 100% 100%;
     min-height: 100vh;
     color: white;
-    opacity: 1; /* Agregamos la propiedad de opacidad */
-    transition: opacity 0.5s; /* Agregamos la transición para la opacidad */
+    opacity: 1;
+    transition: opacity 0.5s;
 }

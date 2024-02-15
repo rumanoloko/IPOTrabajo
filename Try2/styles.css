@@ -40,7 +40,7 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
     font-size: 19px;
-    opacity: 1; /* Agregamos la propiedad de opacidad */
+    opacity: 1;
 }
 
 .menu-link:hover,
@@ -57,7 +57,7 @@ body {
 .sub-menu-link {
     margin-left: 20px;
     transition: background-color 0.3s, color 0.3s;
-    opacity: 1; /* Agregamos la propiedad de opacidad */
+    opacity: 1;
 }
 
 .sub-menu-link:hover,
@@ -82,8 +82,8 @@ body {
     background-size: 100% 100%;
     min-height: 100vh;
     color: white;
-    opacity: 1; /* Agregamos la propiedad de opacidad */
-    transition: opacity 0.5s; /* Agregamos la transición para la opacidad */
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 
@@ -103,10 +103,9 @@ body {
     height: 19px;
 }
 
-/* Transición para ocultar el contenido con opacidad al cambiar de ventana */
 #contenido.hide-content {
     opacity: 0;
-    pointer-events: none; /* Desactivar interactividad con el contenido oculto */
+    pointer-events: none;
 }
 
 body {
@@ -181,29 +180,29 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Añadido un color de fondo para mayor contraste */
+    background-color: #f0f0f0;
 }
 
 #chat-messages {
-    max-height: calc(100vh - 20px); /* Se ajusta la altura máxima para que quepa en la pantalla */
-    overflow-y: auto; /* Agregado desplazamiento vertical en caso de que haya demasiados mensajes */
+    max-height: calc(100vh - 20px);
+    overflow-y: auto;
 }
 
 .message {
-    max-width: 80%; /* Se limita el ancho máximo del mensaje para que no ocupe toda la pantalla */
+    max-width: 80%;
     margin-bottom: 10px;
 }
 
 .right {
-    align-self: flex-end; /* Alinea el mensaje a la derecha dentro del contenedor */
-    background-color: #acf5e5; /* Color de fondo para mensajes a la derecha */
-    color: #000; /* Color del texto para mensajes a la derecha */
+    align-self: flex-end;
+    background-color: #acf5e5;
+    color: #000;
 }
 
 .left {
-    align-self: flex-start; /* Alinea el mensaje a la izquierda dentro del contenedor */
-    background-color: #add8e6; /* Color de fondo para mensajes a la izquierda */
-    color: #000; /* Color del texto para mensajes a la izquierda */
+    align-self: flex-start;
+    background-color: #add8e6;
+    color: #000;
 }
 
 

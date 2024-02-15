@@ -40,7 +40,7 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
     font-size: 19px;
-    opacity: 1; /* Agregamos la propiedad de opacidad */
+    opacity: 1;
 }
 
 .menu-link:hover,
@@ -62,14 +62,14 @@ body {
 }
 
 .subapartados.visible {
-    max-height: 1000px; /* Un valor suficientemente grande para acomodar el contenido */
+    max-height: 1000px;
     transition: max-height 0.5s ease-in-out;
 }
 
 .sub-menu-link {
     margin-left: 20px;
     transition: background-color 0.3s, color 0.3s;
-    opacity: 1; /* Agregamos la propiedad de opacidad */
+    opacity: 1;
 }
 
 .sub-menu-link:hover,
@@ -94,8 +94,8 @@ body {
     background-size: 100% 100%;
     min-height: 100vh;
     color: white;
-    opacity: 1; /* Agregamos la propiedad de opacidad */
-    transition: opacity 0.5s; /* Agregamos la transición para la opacidad */
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 #id_eng {
@@ -148,51 +148,51 @@ body {
 
 
 .cuadrado1 {
-    width: 825px; /* Ancho del cuadrado1 */
-    height: 750px; /* Altura del cuadrado1 */
-    top: 0px; /* Ajusta la posición vertical en píxeles */
-    left: 100px; /* Ajusta la posición horizontal en píxeles */
+    width: 825px;
+    height: 750px;
+    top: 0px;
+    left: 100px;
     display: flex;
     justify-content: center;
     align-items: start;
-    border-radius: 15px; /* Agrega bordes redondeados */
-    overflow: hidden; /* Evita que los bordes redondeados se corten */
-    background-color: #ffffff; /* Agrega un color de fondo si es necesario */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
     margin-left: 30px;
     margin-top: 150px;
 }
 
 .cuadrado1 img {
-    max-width: 100%; /* Ajustar la imagen al tamaño del contenedor */
+    max-width: 100%;
     max-height: 100%;
-    border-radius: 15px; /* Añade bordes redondeados a la imagen */
+    border-radius: 15px;
 }
 
 .cuadrado1 {
-    position: relative; /* Establece el contexto de posición para los elementos hijos */
-    width: 825px; /* Ancho del cuadrado1 */
-    height: 750px; /* Altura del cuadrado1 */
-    top: 0px; /* Ajusta la posición vertical en píxeles */
-    left: 100px; /* Ajusta la posición horizontal en píxeles */
+    position: relative;
+    width: 825px;
+    height: 750px;
+    top: 0px;
+    left: 100px;
     display: flex;
     justify-content: center;
     align-items: start;
-    border-radius: 15px; /* Agrega bordes redondeados */
-    overflow: hidden; /* Evita que los bordes redondeados se corten */
-    background-color: #ffffff; /* Agrega un color de fondo si es necesario */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
     margin-left: 30px;
     margin-top: 150px;
 }
 
 .cuadrado1 img {
-    max-width: 100%; /* Ajustar la imagen al tamaño del contenedor */
+    max-width: 100%;
     max-height: 100%;
-    border-radius: 15px; /* Añade bordes redondeados a la imagen */
-    position: absolute; /* Posiciona las imágenes de Perfil de forma absoluta dentro de .cuadrado1 */
+    border-radius: 15px;
+    position: absolute;
 }
 
-.cuadrado1 img:nth-child(1) { top: 0; left: 0; } /* Perfil_1.png */
-.cuadrado1 img:nth-child(2) { top: 0; right: 0; } /* Perfil_2.png, en la esquina superior derecha */
-.cuadrado1 img:nth-child(3) { bottom: 0; left: 0; } /* Perfil_3.png, en la esquina inferior izquierda */
-.cuadrado1 img:nth-child(4) { bottom: 0; right: 0; } /* Perfil_6.png, en la esquina inferior derecha */
+.cuadrado1 img:nth-child(1) { top: 0; left: 0; }
+.cuadrado1 img:nth-child(2) { top: 0; right: 0; }
+.cuadrado1 img:nth-child(3) { bottom: 0; left: 0; }
+.cuadrado1 img:nth-child(4) { bottom: 0; right: 0; }
 

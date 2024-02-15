@@ -2,22 +2,20 @@
     margin-left: 0px;
     padding: 20px;
     background: url('img_17.png') no-repeat;
-    /*background-position: ;*/
     background-size: 100% 100%;
     min-height: 100vh;
     color: white;
-    opacity: 1; /* Agregamos la propiedad de opacidad */
-    transition: opacity 0.5s; /* Agregamos la transición para la opacidad */
+    opacity: 1;
+    transition: opacity 0.5s;
     width: 1400px;
     height: 450px;
     margin-top: -5px;
 }
 
-/* Estilos para el cuadrado */
 .cuadrado1 {
     width: 800px;
     height: 50px;
-    background-color: #ffffff; /* Puedes cambiar el color según tus preferencias */
+    background-color: #ffffff;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -26,42 +24,37 @@
     border-radius: 10px;
 }
 #id_FotoPerfil {
-    /* Modificar posición */
+
     position: relative;
     left: 50px;
     top: 20px;
 
-    /* Modificar dimensiones */
     width: 100px;
     height: 751px;
 }
 
-/* Estilo para el primer texto y su posición */
 #texto1 {
-    width: 453px; /* ajusta el ancho según tus necesidades */
-    height: 35px; /* ajusta la altura según tus necesidades */
+    width: 453px;
+    height: 35px;
     position: absolute;
-    top: 395px; /* ajusta la posición vertical según tus necesidades */
-    left: 90px; /* ajusta la posición horizontal según tus necesidades */
+    top: 395px;
+    left: 90px;
 }
 
-/* Estilo para el segundo texto y su posición */
 #texto2 {
-    width: 453px; /* ajusta el ancho según tus necesidades */
-    height: 35px; /* ajusta la altura según tus necesidades */
+    width: 453px;
+    height: 35px;
     position: absolute;
-    top: 263px; /* ajusta la posición vertical según tus necesidades */
-    left: 90px; /* ajusta la posición horizontal según tus necesidades */
+    top: 263px;
+    left: 90px;
 }
 
-/* Estilo para el botón y su posición */
 button {
-    width: 325px; /* ajusta el ancho según tus necesidades */
-    height: 50px; /* ajusta la altura según tus necesidades */
+    width: 325px;
+    height: 50px;
     position: absolute;
-    top: 613px; /* ajusta la posición vertical según tus necesidades */
-    left: 154px; /* ajusta la posición horizontal según tus necesidades */
-    /*background-color: transparent;*/
+    top: 613px;
+    left: 154px;
     border-color: transparent;
 }
 

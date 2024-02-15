@@ -3,5 +3,5 @@ function viajar(url) {
     audioConfirmacion.play();
     setTimeout(function() {
         window.location.href = 'indexChat.html';
-    }, 1000); // 1000 milisegundos = 1 segundo
+    }, 1000);
 }
